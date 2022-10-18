@@ -7,10 +7,10 @@
     "operations": {
         "get": {
             "method": "GET",
-            "url": "{{ properties.module }}"
+            "url": "{{ properties.module }}?fields={{ properties.fields }}"
         }
     },
     "type": "system:rest",
-    "url_pattern": "https://www.zohoapis.com/crm/v3/%s",
+    "url_pattern": "https://www.zohoapis.eu/crm/v3/%s",
     "verify_ssl": true
 }

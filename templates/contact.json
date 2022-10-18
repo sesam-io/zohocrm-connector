@@ -8,7 +8,8 @@
             "operation": "get",
             "payload_property": "data",
             "properties": {
-                "module": "contacts"
+                "fields": "LastName,Email",
+                "module": "Contacts"
             },
             "system": "{{@ system @}}",
             "type": "rest"

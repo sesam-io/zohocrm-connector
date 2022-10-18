@@ -1,12 +1,8 @@
 {
     "_id": "{{@ system @}}",
-    "oauth2": {
-        "client_id": "$SECRET(client-id)",
-        "client_secret": "$SECRET(client-secret)",
-        "scope": [
-            "ZohoCRM.modules.ALL"
-        ],
-        "token_url": "https://accounts.zoho.eu/oauth/v2/token"
+    "headers": {
+        "Authorization": "Zoho-oauthtoken $SECRET(jwt)",
+        "Content-Type": "application/json"
     },
     "operations": {
         "get": {

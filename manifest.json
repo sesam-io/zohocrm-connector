@@ -1,0 +1,8 @@
+{
+  "datatypes": {
+    "contact": {
+      "template": "templates/contact.json"
+    }
+  },
+  "system-template": "templates/system.json"
+}

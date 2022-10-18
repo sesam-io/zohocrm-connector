@@ -1,0 +1,18 @@
+[
+    {
+        "_id": "{{@ system @}}-contact-collect",
+        "add_namespaces": false,
+        "metadata": {},
+        "source": {
+            "id_expression": "{{ id }}",
+            "operation": "get",
+            "payload_property": "data",
+            "properties": {
+                "module": "contacts"
+            },
+            "system": "{{@ system @}}",
+            "type": "rest"
+        },
+        "type": "pipe"
+    }
+]

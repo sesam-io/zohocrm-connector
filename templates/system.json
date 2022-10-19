@@ -8,6 +8,11 @@
         "get": {
             "method": "GET",
             "url": "{{ properties.module }}?fields={{ properties.fields }}"
+        },
+        "upsert": {
+            "method": "POST",
+            "payload-type": "json",
+            "url": "{{ properties.module }}/upsert"
         }
     },
     "type": "system:rest",

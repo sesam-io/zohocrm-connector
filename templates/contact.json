@@ -8,11 +8,28 @@
             "operation": "get",
             "payload_property": "data",
             "properties": {
-                "fields": "LastName,Email",
+                "fields": "First_Name,Last_Name,Email",
                 "module": "Contacts"
             },
             "system": "{{@ system @}}",
             "type": "rest"
+        },
+        "type": "pipe"
+    },
+    {
+        "_id": "{{@ system @}}-contact-share",
+        "metadata": {},
+        "sink": {
+            "operation": "upsert",
+            "properties": {
+                "module": "Contacts"
+            },
+            "system": "{{@ system @}}",
+            "type": "rest"
+        },
+        "source": {
+            "dataset": "{{@ system @}}-contact-transform",
+            "type": "dataset"
         },
         "type": "pipe"
     }

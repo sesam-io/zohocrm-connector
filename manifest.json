@@ -1,8 +1,21 @@
 {
+  "additional_parameters": {
+    "account_id": {},
+    "token_url": {}
+  },
+  "auth": "oauth2",
   "datatypes": {
     "contact": {
       "template": "templates/contact.json"
     }
+  },
+  "oauth2": {
+    "login_url": "https://accounts.zoho.com/oauth/v2/auth?access_type=offline",
+    "scopes": [
+      "ZohoCRM.modules.ALL",
+      "ZohoCRM.settings.ALL"
+    ],
+    "token_url": "https://accounts.zoho.eu/oauth/v2/token"
   },
   "system-template": "templates/system.json"
 }

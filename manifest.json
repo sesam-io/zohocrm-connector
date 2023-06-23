@@ -10,7 +10,7 @@
       "template": "templates/contact.json"
     },
     "deal": {
-      "template": "templates/contact.json"
+      "template": "templates/deal.json"
     },
     "account": {
       "template": "templates/account.json"

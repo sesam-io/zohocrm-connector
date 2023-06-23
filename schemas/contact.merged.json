@@ -5,201 +5,238 @@
   "properties": {
     "Account_Name": {
       "additionalProperties": true,
+      "description": "Select the account related to the contact.",
       "properties": {
         "id": {
+          "description": "The id of the account related to the contact.",
           "type": "string"
         },
         "name": {
+          "description": "The name of the account related to the contact.",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Assistant": {
-      "description": "",
-      "type": null
+      "description": "Specify the name of the contact\u2019s assistant. Note: undocumented type, assuming string",
+      "type": "string"
     },
     "Asst_Phone": {
-      "description": "",
-      "type": null
+      "description": "Specify the phone number of the contact's assistant.",
+      "type": "string"
     },
     "Created_By": {
       "additionalProperties": true,
+      "description": "Displays name of the user created the contact first time.",
       "properties": {
         "email": {
+          "description": "Email of the user created the contact first time",
           "type": "string"
         },
         "id": {
+          "description": "Id of the user created the contact first time",
           "type": "string"
         },
         "name": {
+          "description": "Name of the user created the contact first time",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Created_Time": {
+      "description": "Created datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFSET",
       "type": "string"
     },
     "Date_of_Birth": {
-      "description": "",
-      "type": null
+      "description": "Specify the birthday of the contact to send greetings for a better relationship.",
+      "type": "string"
     },
     "Department": {
+      "description": "Specify the department of the contact.",
       "type": "string"
     },
     "Description": {
-      "description": "",
-      "type": null
+      "description": "Specify any other details about contact.",
+      "type": "string"
     },
     "Email": {
+      "description": "Specify the primary email address of the contact.",
       "type": "string"
     },
     "Email_Opt_Out": {
+      "description": "Select the check-box to remove contacts from your mailing list so that they will not receive any emails from your Zoho CRM account.",
       "type": "boolean"
     },
     "Enrich_Status__s": {
-      "description": "",
-      "type": null
+      "description": "Undocumented",
+      "type": "unknown"
     },
     "Fax": {
-      "description": "",
-      "type": null
+      "description": "Specify fax number of the contact.",
+      "type": "string"
     },
     "First_Name": {
+      "description": "Specify the first name of the contact.",
       "type": "string"
     },
     "Full_Name": {
+      "description": "Undocumented - concatenation of firs and last name?",
       "type": "string"
     },
     "Home_Phone": {
-      "description": "",
-      "type": null
+      "description": "Specify the home phone number of the contact.",
+      "type": "string"
     },
     "Last_Activity_Time": {
+      "description": "Unclear: Possibly last user activity datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFSET",
       "type": "string"
     },
     "Last_Enriched_Time__s": {
-      "description": "",
-      "type": null
+      "description": "Undocumented - string datetime?",
+      "type": "unknown"
     },
     "Last_Name": {
+      "description": "Specify the last name of the contact. This field is mandatory.",
       "type": "string"
     },
     "Lead_Source": {
+      "description": "Select the source from which the contact is created.",
       "type": "string"
     },
     "Mailing_City": {
+      "description": "Specify the primary address of the contact.",
       "type": "string"
     },
     "Mailing_Country": {
+      "description": "Specify the primary address of the contact.",
       "type": "string"
     },
     "Mailing_State": {
+      "description": "Specify the primary address of the contact.",
       "type": "string"
     },
     "Mailing_Street": {
+      "description": "Specify the primary address of the contact.",
       "type": "string"
     },
     "Mailing_Zip": {
+      "description": "Specify the primary address of the contact.",
       "type": "string"
     },
     "Mobile": {
+      "description": "Specify the mobile number of the contact.",
       "type": "string"
     },
     "Modified_By": {
       "additionalProperties": true,
+      "description": "Displays name of the user modified the contact.",
       "properties": {
         "email": {
+          "description": "Email of the user modified the contact.",
           "type": "string"
         },
         "id": {
+          "description": "Id of the user modified the contact.",
           "type": "string"
         },
         "name": {
+          "description": "Name of the user modified the contact.",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Modified_Time": {
+      "description": "Last modified datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFSET",
       "type": "string"
     },
     "Other_City": {
-      "description": "",
-      "type": null
+      "description": "Specify the other address of the contact (if any).",
+      "type": "string"
     },
     "Other_Country": {
-      "description": "",
-      "type": null
+      "description": "Specify the other address of the contact (if any).",
+      "type": "string"
     },
     "Other_Phone": {
-      "description": "",
-      "type": null
+      "description": "Specify the other address of the contact (if any).",
+      "type": "string"
     },
     "Other_State": {
-      "description": "",
-      "type": null
+      "description": "Specify the other address of the contact (if any).",
+      "type": "string"
     },
     "Other_Street": {
-      "description": "",
-      "type": null
+      "description": "Specify the other address of the contact (if any).",
+      "type": "string"
     },
     "Other_Zip": {
-      "description": "",
-      "type": null
+      "description": "Specify the other address of the contact (if any).",
+      "type": "string"
     },
     "Owner": {
       "additionalProperties": true,
+      "description": "Select the name of the user to whom the contact is assigned.",
       "properties": {
         "email": {
+          "description": "The email of the user to whom the contact is assigned.",
           "type": "string"
         },
         "id": {
+          "description": "The id of the user to whom the contact is assigned.",
           "type": "string"
         },
         "name": {
+          "description": "The name of the user to whom the contact is assigned.",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Phone": {
+      "description": "Specify the office phone number of the contact.",
       "type": "string"
     },
     "Record_Image": {
+      "description": "Undocumented, looks like a binary field.",
       "type": "string"
     },
     "Reporting_To": {
-      "description": "",
-      "type": null
+      "description": "Select the person to whom the contact reports",
+      "type": "unknown"
     },
     "Salutation": {
-      "description": "",
-      "type": null
+      "description": "Select the Salutation of the contact, such as Mr., Ms, Mrs., or others. Note: type is unknown, assume a string.",
+      "type": "string"
     },
     "Secondary_Email": {
-      "description": "",
-      "type": null
+      "description": "Specify another email address of the contact.",
+      "type": "string"
     },
     "Skype_ID": {
+      "description": "Specify the Skype ID of the contact. Currently skype ID can be in the range of 6 to 32 characters.",
       "type": "string"
     },
     "Title": {
+      "description": "Specify the job position of the contact.",
       "type": "string"
     },
     "Twitter": {
+      "description": "Undocumented, assume this is a twitter handle.",
       "type": "string"
     },
     "Unsubscribed_Mode": {
-      "description": "",
-      "type": null
+      "description": "Undocumented",
+      "type": "unknown"
     },
     "Unsubscribed_Time": {
-      "description": "",
-      "type": null
+      "description": "Undocumented",
+      "type": "unknown"
     },
     "id": {
+      "description": "Id of the contact.",
       "type": "string"
     }
   },

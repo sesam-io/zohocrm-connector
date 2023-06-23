@@ -15,13 +15,27 @@
       },
       "type": "object"
     },
-    "Assistant": {
+    "Amount": {
+      "type": "integer"
+    },
+    "Campaign_Source": {
       "description": "",
       "type": null
     },
-    "Asst_Phone": {
-      "description": "",
-      "type": null
+    "Closing_Date": {
+      "type": "string"
+    },
+    "Contact_Name": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
     },
     "Created_By": {
       "additionalProperties": true,
@@ -41,71 +55,34 @@
     "Created_Time": {
       "type": "string"
     },
-    "Date_of_Birth": {
-      "description": "",
-      "type": null
-    },
-    "Department": {
+    "Deal_Name": {
       "type": "string"
     },
     "Description": {
       "description": "",
       "type": null
     },
-    "Email": {
-      "type": "string"
-    },
-    "Email_Opt_Out": {
-      "type": "boolean"
-    },
-    "Enrich_Status__s": {
-      "description": "",
-      "type": null
-    },
-    "Fax": {
-      "description": "",
-      "type": null
-    },
-    "First_Name": {
-      "type": "string"
-    },
-    "Full_Name": {
-      "type": "string"
-    },
-    "Home_Phone": {
+    "Expected_Revenue": {
       "description": "",
       "type": null
     },
     "Last_Activity_Time": {
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
-    "Last_Enriched_Time__s": {
+    "Lead_Conversion_Time": {
       "description": "",
       "type": null
     },
-    "Last_Name": {
-      "type": "string"
-    },
     "Lead_Source": {
-      "type": "string"
-    },
-    "Mailing_City": {
-      "type": "string"
-    },
-    "Mailing_Country": {
-      "type": "string"
-    },
-    "Mailing_State": {
-      "type": "string"
-    },
-    "Mailing_Street": {
-      "type": "string"
-    },
-    "Mailing_Zip": {
-      "type": "string"
-    },
-    "Mobile": {
-      "type": "string"
+      "description": "",
+      "type": null
     },
     "Modified_By": {
       "additionalProperties": true,
@@ -125,29 +102,12 @@
     "Modified_Time": {
       "type": "string"
     },
-    "Other_City": {
+    "Next_Step": {
       "description": "",
       "type": null
     },
-    "Other_Country": {
-      "description": "",
-      "type": null
-    },
-    "Other_Phone": {
-      "description": "",
-      "type": null
-    },
-    "Other_State": {
-      "description": "",
-      "type": null
-    },
-    "Other_Street": {
-      "description": "",
-      "type": null
-    },
-    "Other_Zip": {
-      "description": "",
-      "type": null
+    "Overall_Sales_Duration": {
+      "type": "integer"
     },
     "Owner": {
       "additionalProperties": true,
@@ -164,40 +124,17 @@
       },
       "type": "object"
     },
-    "Phone": {
+    "Probability": {
+      "type": "integer"
+    },
+    "Sales_Cycle_Duration": {
+      "type": "integer"
+    },
+    "Stage": {
       "type": "string"
     },
-    "Record_Image": {
+    "Type": {
       "type": "string"
-    },
-    "Reporting_To": {
-      "description": "",
-      "type": null
-    },
-    "Salutation": {
-      "description": "",
-      "type": null
-    },
-    "Secondary_Email": {
-      "description": "",
-      "type": null
-    },
-    "Skype_ID": {
-      "type": "string"
-    },
-    "Title": {
-      "type": "string"
-    },
-    "Twitter": {
-      "type": "string"
-    },
-    "Unsubscribed_Mode": {
-      "description": "",
-      "type": null
-    },
-    "Unsubscribed_Time": {
-      "description": "",
-      "type": null
     },
     "id": {
       "type": "string"

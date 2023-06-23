@@ -3,15 +3,7 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
-    "Assistant": {
-      "description": "",
-      "type": null
-    },
-    "Asst_Phone": {
-      "description": "",
-      "type": null
-    },
-    "Date_of_Birth": {
+    "Campaign_Source": {
       "description": "",
       "type": null
     },
@@ -19,63 +11,19 @@
       "description": "",
       "type": null
     },
-    "Enrich_Status__s": {
+    "Expected_Revenue": {
       "description": "",
       "type": null
     },
-    "Fax": {
+    "Lead_Conversion_Time": {
       "description": "",
       "type": null
     },
-    "Home_Phone": {
+    "Lead_Source": {
       "description": "",
       "type": null
     },
-    "Last_Enriched_Time__s": {
-      "description": "",
-      "type": null
-    },
-    "Other_City": {
-      "description": "",
-      "type": null
-    },
-    "Other_Country": {
-      "description": "",
-      "type": null
-    },
-    "Other_Phone": {
-      "description": "",
-      "type": null
-    },
-    "Other_State": {
-      "description": "",
-      "type": null
-    },
-    "Other_Street": {
-      "description": "",
-      "type": null
-    },
-    "Other_Zip": {
-      "description": "",
-      "type": null
-    },
-    "Reporting_To": {
-      "description": "",
-      "type": null
-    },
-    "Salutation": {
-      "description": "",
-      "type": null
-    },
-    "Secondary_Email": {
-      "description": "",
-      "type": null
-    },
-    "Unsubscribed_Mode": {
-      "description": "",
-      "type": null
-    },
-    "Unsubscribed_Time": {
+    "Next_Step": {
       "description": "",
       "type": null
     }

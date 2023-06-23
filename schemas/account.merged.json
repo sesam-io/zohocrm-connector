@@ -4,160 +4,192 @@
   "additionalProperties": true,
   "properties": {
     "Account_Name": {
+      "description": "Specify the company name. This field is mandatory.",
       "type": "string"
     },
     "Account_Number": {
+      "description": "Specify the reference number for account. Up to 40 characters are allowed in this field.",
       "type": "string"
     },
     "Account_Site": {
-      "description": "",
-      "type": null
+      "description": "Specify the name of the account\u2019s location, for example, Headquarters or London. Up to 80 characters are allowed in this field.",
+      "type": "string"
     },
     "Account_Type": {
+      "description": "Select the type of account from the drop-down list.",
       "type": "string"
     },
     "Annual_Revenue": {
+      "description": "Specify the annual revenue of the account.",
       "type": "integer"
     },
     "Billing_City": {
+      "description": "Specify the billing address of the account to send the quotes, invoices, and other agreements.",
       "type": "string"
     },
     "Billing_Code": {
+      "description": "Specify the billing address of the account to send the quotes, invoices, and other agreements.",
       "type": "string"
     },
     "Billing_Country": {
+      "description": "Specify the billing address of the account to send the quotes, invoices, and other agreements.",
       "type": "string"
     },
     "Billing_State": {
+      "description": "Specify the billing address of the account to send the quotes, invoices, and other agreements.",
       "type": "string"
     },
     "Billing_Street": {
+      "description": "Specify the billing address of the account to send the quotes, invoices, and other agreements.",
       "type": "string"
     },
     "Created_By": {
       "additionalProperties": true,
+      "description": "Displays name of the user created the Account first time.",
       "properties": {
         "email": {
+          "description": "Email of the user created the Account first time",
           "type": "string"
         },
         "id": {
+          "description": "Id of the user created the Account first time",
           "type": "string"
         },
         "name": {
+          "description": "Name of the user created the Account first time",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Created_Time": {
+      "description": "Created datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFSET",
       "type": "string"
     },
     "Description": {
+      "description": "Specify any other details about the account.",
       "type": "string"
     },
     "Employees": {
+      "description": "Specify the number of employees in account's company.",
       "type": "integer"
     },
     "Enrich_Status__s": {
-      "description": "",
-      "type": null
+      "description": "Undocumented",
+      "type": "unknown"
     },
     "Fax": {
-      "description": "",
-      "type": null
+      "description": "Specify fax number of the account.",
+      "type": "string"
     },
     "Industry": {
+      "description": "Select the type of industry from the drop-down list.",
       "type": "string"
     },
     "Last_Activity_Time": {
+      "description": "Last user activity datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFSET",
       "type": "string"
     },
     "Last_Enriched_Time__s": {
-      "description": "",
-      "type": null
+      "description": "Undocumented - string datetime?",
+      "type": "unknown"
     },
     "Modified_By": {
       "additionalProperties": true,
+      "description": "Displays name of the user modified the Account.",
       "properties": {
         "email": {
+          "description": "Email of the user modified the Account.",
           "type": "string"
         },
         "id": {
+          "description": "Id of the user modified the Account.",
           "type": "string"
         },
         "name": {
+          "description": "Name of the user modified the Account.",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Modified_Time": {
+      "description": "Last modified datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFSET",
       "type": "string"
     },
     "Owner": {
       "additionalProperties": true,
+      "description": "Select the name of the user to whom the account is assigned.",
       "properties": {
         "email": {
+          "description": "The email of the user to whom the account is assigned.",
           "type": "string"
         },
         "id": {
+          "description": "The id of the user to whom the account is assigned.",
           "type": "string"
         },
         "name": {
+          "description": "The name of the user to whom the account is assigned.",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Ownership": {
+      "description": "Specify the type of ownership of the company from the drop-down list.",
       "type": "string"
     },
     "Parent_Account": {
-      "description": "",
-      "type": null
+      "description": "Select the parent company name from the Change pop-up dialog.",
+      "type": "string"
     },
     "Phone": {
+      "description": "Specify phone number of the account.",
       "type": "string"
     },
     "Rating": {
-      "description": "",
-      "type": null
+      "description": "Specify the rating of the account.",
+      "type": "string"
     },
     "Record_Image": {
+      "description": "Undocumented, looks like a binary field",
       "type": "string"
     },
     "SIC_Code": {
-      "description": "",
-      "type": null
+      "description": "Specify the Standard Industrial Classification code of the account.",
+      "type": "integer"
     },
     "Shipping_City": {
-      "description": "",
-      "type": null
+      "description": "Specify the shipping city of the account to deliver the shipment.",
+      "type": "string"
     },
     "Shipping_Code": {
-      "description": "",
-      "type": null
+      "description": "Specify the shipping zip code of the account to deliver the shipment.",
+      "type": "string"
     },
     "Shipping_Country": {
-      "description": "",
-      "type": null
+      "description": "Specify the shipping country of the account to deliver the shipment.",
+      "type": "string"
     },
     "Shipping_State": {
-      "description": "",
-      "type": null
+      "description": "Specify the shipping state of the account to deliver the shipment.",
+      "type": "string"
     },
     "Shipping_Street": {
-      "description": "",
-      "type": null
+      "description": "Specify the shipping street of the account to deliver the shipment.",
+      "type": "string"
     },
     "Ticker_Symbol": {
-      "description": "",
-      "type": null
+      "description": "Specify the ticker symbol of the Company.",
+      "type": "string"
     },
     "Website": {
+      "description": "Specify the URL of the company's Web site.",
       "type": "string"
     },
     "id": {
+      "description": "The id of the account.",
       "type": "string"
     }
   },

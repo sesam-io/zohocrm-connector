@@ -8,6 +8,34 @@
     "token_url": "{{@ token_url @}}"
   },
   "operations": {
+    "account-delete": {
+      "method": "DELETE",
+      "url": "Accounts/{{ entity['$source']['id'] }}"
+    },
+    "account-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Accounts/{{ entity['$source']['id'] }}"
+    },
+    "account-upsert": {
+      "method": "POST",
+      "payload_property": "data",
+      "url": "Accounts/upsert"
+    },
+    "contact-delete": {
+      "method": "DELETE",
+      "url": "Contacts/{{ entity['$source']['id'] }}"
+    },
+    "contact-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Contacts/{{ entity['$source']['id'] }}"
+    },
+    "contact-upsert": {
+      "method": "POST",
+      "payload_property": "data",
+      "url": "Contacts/upsert"
+    },
     "deal-delete": {
       "method": "DELETE",
       "url": "Deals/{{ entity['$source']['id'] }}"

@@ -1,24 +1,24 @@
 {
-    "_id": "{{@ system @}}",
-    "oauth2": {
-        "access_token": "$SECRET(oauth_access_token)",
-        "client_id": "$SECRET(oauth_client_id)",
-        "client_secret": "$SECRET(oauth_client_secret)",
-        "refresh_token": "$SECRET(oauth_refresh_token)",
-        "token_url": "{{@ token_url @}}"
+  "_id": "{{@ system @}}",
+  "oauth2": {
+    "access_token": "$SECRET(oauth_access_token)",
+    "client_id": "$SECRET(oauth_client_id)",
+    "client_secret": "$SECRET(oauth_client_secret)",
+    "refresh_token": "$SECRET(oauth_refresh_token)",
+    "token_url": "{{@ token_url @}}"
+  },
+  "operations": {
+    "get": {
+      "method": "GET",
+      "url": "{{ properties.module }}?fields={{ properties.fields }}"
     },
-    "operations": {
-        "get": {
-            "method": "GET",
-            "url": "{{ properties.module }}?fields={{ properties.fields }}"
-        },
-        "upsert": {
-            "method": "POST",
-            "payload-type": "json",
-            "url": "{{ properties.module }}/upsert"
-        }
-    },
-    "type": "system:rest",
-    "url_pattern": "https://www.zohoapis.eu/crm/v3/%s",
-    "verify_ssl": true
+    "upsert": {
+      "method": "POST",
+      "payload-type": "json",
+      "url": "{{ properties.module }}/upsert"
+    }
+  },
+  "type": "system:rest",
+  "url_pattern": "https://www.zohoapis.eu/crm/v3/%s",
+  "verify_ssl": true
 }

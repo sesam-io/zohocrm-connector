@@ -1,36 +1,36 @@
 [
-    {
-        "_id": "{{@ system @}}-{{@ datatype @}}-collect",
-        "add_namespaces": false,
-        "metadata": {},
-        "source": {
-            "id_expression": "{{ id }}",
-            "operation": "get",
-            "payload_property": "data",
-            "properties": {
-                "fields": "Account_Name,Account_Number,Account_Site,Account_Type,Annual_Revenue,Billing_City,Billing_Code,Billing_Country,Billing_State,Billing_Street,Created_By,Created_Time,Description,Employees,Enrich_Status__s,Fax,Industry,Last_Activity_Time,Last_Enriched_Time__s,Modified_By,Modified_Time,Owner,Ownership,Parent_Account,Phone,Rating,Record_Image,SIC_Code,Shipping_City,Shipping_Code,Shipping_Country,Shipping_State,Shipping_Street,Ticker_Symbol,Website",
-                "module": "Accounts"
-            },
-            "system": "{{@ system @}}",
-            "type": "rest"
-        },
-        "type": "pipe"
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+    "add_namespaces": false,
+    "metadata": {},
+    "source": {
+      "id_expression": "{{ id }}",
+      "operation": "get",
+      "payload_property": "data",
+      "properties": {
+        "fields": "Account_Name,Account_Number,Account_Site,Account_Type,Annual_Revenue,Billing_City,Billing_Code,Billing_Country,Billing_State,Billing_Street,Created_By,Created_Time,Description,Employees,Enrich_Status__s,Fax,Industry,Last_Activity_Time,Last_Enriched_Time__s,Modified_By,Modified_Time,Owner,Ownership,Parent_Account,Phone,Rating,Record_Image,SIC_Code,Shipping_City,Shipping_Code,Shipping_Country,Shipping_State,Shipping_Street,Ticker_Symbol,Website",
+        "module": "Accounts"
+      },
+      "system": "{{@ system @}}",
+      "type": "rest"
     },
-    {
-        "_id": "{{@ system @}}-{{@ datatype @}}-share",
-        "metadata": {},
-        "sink": {
-            "operation": "upsert",
-            "properties": {
-                "module": "Accounts"
-            },
-            "system": "{{@ system @}}",
-            "type": "rest"
-        },
-        "source": {
-            "dataset": "{{@ system @}}-{{@ datatype @}}-transform",
-            "type": "dataset"
-        },
-        "type": "pipe"
-    }
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-share",
+    "metadata": {},
+    "sink": {
+      "operation": "upsert",
+      "properties": {
+        "module": "Accounts"
+      },
+      "system": "{{@ system @}}",
+      "type": "rest"
+    },
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-transform",
+      "type": "dataset"
+    },
+    "type": "pipe"
+  }
 ]

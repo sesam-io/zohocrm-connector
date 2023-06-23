@@ -5,7 +5,7 @@
     "metadata": {},
     "source": {
       "id_expression": "{{ id }}",
-      "operation": "get",
+      "operation": "list-records",
       "payload_property": "data",
       "properties": {
         "fields": "Account_Name,Assistant,Asst_Phone,Created_By,Created_Time,Date_of_Birth,Department,Description,Email,Email_Opt_Out,Enrich_Status__s,Fax,First_Name,Full_Name,Home_Phone,Last_Activity_Time,Last_Enriched_Time__s,Last_Name,Lead_Source,Mailing_City,Mailing_Country,Mailing_State,Mailing_Street,Mailing_Zip,Mobile,Modified_By,Modified_Time,Other_City,Other_Country,Other_Phone,Other_State,Other_Street,Other_Zip,Owner,Phone,Record_Image,Reporting_To,Salutation,Secondary_Email,Skype_ID,Title,Twitter,Unsubscribed_Mode,Unsubscribed_Time",

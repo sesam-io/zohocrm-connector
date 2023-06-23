@@ -4,38 +4,66 @@
   "additionalProperties": true,
   "properties": {
     "Account_Name": {
-      "additionalProperties": true,
-      "properties": {
-        "id": {
-          "type": "string"
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
         },
-        "name": {
-          "type": "string"
+        {
+          "type": "null"
         }
-      },
-      "type": "object"
+      ]
     },
     "Amount": {
-      "type": "integer"
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "Campaign_Source": {
       "description": "",
       "type": null
     },
     "Closing_Date": {
-      "type": "string"
-    },
-    "Contact_Name": {
-      "additionalProperties": true,
-      "properties": {
-        "id": {
-          "type": "string"
+      "anyOf": [
+        {
+          "type": "null"
         },
-        "name": {
+        {
           "type": "string"
         }
-      },
-      "type": "object"
+      ]
+    },
+    "Contact_Name": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "Created_By": {
       "additionalProperties": true,
@@ -107,7 +135,14 @@
       "type": null
     },
     "Overall_Sales_Duration": {
-      "type": "integer"
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "Owner": {
       "additionalProperties": true,
@@ -128,13 +163,27 @@
       "type": "integer"
     },
     "Sales_Cycle_Duration": {
-      "type": "integer"
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "Stage": {
       "type": "string"
     },
     "Type": {
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "id": {
       "type": "string"

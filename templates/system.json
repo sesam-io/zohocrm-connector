@@ -8,13 +8,28 @@
     "token_url": "{{@ token_url @}}"
   },
   "operations": {
-    "get": {
+    "deal-delete": {
+      "method": "DELETE",
+      "url": "Deals/{{ entity['$source']['id'] }}"
+    },
+    "deal-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Deals/{{ entity['$source']['id'] }}"
+    },
+    "deal-upsert": {
+      "method": "POST",
+      "payload_property": "data",
+      "url": "Deals/upsert"
+    },
+    "list-records": {
       "method": "GET",
       "url": "{{ properties.module }}?fields={{ properties.fields }}"
     },
     "upsert": {
       "method": "POST",
       "payload-type": "json",
+      "payload_property": "data",
       "url": "{{ properties.module }}/upsert"
     }
   },

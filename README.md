@@ -20,4 +20,5 @@ Events : All_day,Check_In_Address,Check_In_By,Check_In_City,Check_In_Comment,Che
 
 ## Notes
 
-Webhooks, paging and continuation support has not been implemented yet
+* Only modules available in the free tier has been implemented (Contacts, Accounts and Deals)
+* Webhooks, paging and continuation support has not been implemented yet

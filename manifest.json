@@ -1,19 +1,17 @@
 {
-  "system": "ZohoCRM",
   "additional_parameters": {
-    "account_id": {},
     "token_url": {}
   },
   "auth": "oauth2",
   "datatypes": {
+    "account": {
+      "template": "templates/account.json"
+    },
     "contact": {
       "template": "templates/contact.json"
     },
     "deal": {
       "template": "templates/deal.json"
-    },
-    "account": {
-      "template": "templates/account.json"
     }
   },
   "oauth2": {
@@ -24,5 +22,6 @@
     ],
     "token_url": "https://accounts.zoho.eu/oauth/v2/token"
   },
+  "system": "ZohoCRM",
   "system-template": "templates/system.json"
 }

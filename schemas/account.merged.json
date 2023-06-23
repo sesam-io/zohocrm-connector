@@ -1,0 +1,166 @@
+{
+  "$id": "/api/pipes/xxxxxx-account-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "Account_Name": {
+      "type": "string"
+    },
+    "Account_Number": {
+      "type": "string"
+    },
+    "Account_Site": {
+      "description": "",
+      "type": null
+    },
+    "Account_Type": {
+      "type": "string"
+    },
+    "Annual_Revenue": {
+      "type": "integer"
+    },
+    "Billing_City": {
+      "type": "string"
+    },
+    "Billing_Code": {
+      "type": "string"
+    },
+    "Billing_Country": {
+      "type": "string"
+    },
+    "Billing_State": {
+      "type": "string"
+    },
+    "Billing_Street": {
+      "type": "string"
+    },
+    "Created_By": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Created_Time": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Employees": {
+      "type": "integer"
+    },
+    "Enrich_Status__s": {
+      "description": "",
+      "type": null
+    },
+    "Fax": {
+      "description": "",
+      "type": null
+    },
+    "Industry": {
+      "type": "string"
+    },
+    "Last_Activity_Time": {
+      "type": "string"
+    },
+    "Last_Enriched_Time__s": {
+      "description": "",
+      "type": null
+    },
+    "Modified_By": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Modified_Time": {
+      "type": "string"
+    },
+    "Owner": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Ownership": {
+      "type": "string"
+    },
+    "Parent_Account": {
+      "description": "",
+      "type": null
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Rating": {
+      "description": "",
+      "type": null
+    },
+    "Record_Image": {
+      "type": "string"
+    },
+    "SIC_Code": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_City": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_Code": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_Country": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_State": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_Street": {
+      "description": "",
+      "type": null
+    },
+    "Ticker_Symbol": {
+      "description": "",
+      "type": null
+    },
+    "Website": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-account-collect",
+  "type": "object"
+}

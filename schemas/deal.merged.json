@@ -1,0 +1,208 @@
+{
+  "$id": "/api/pipes/xxxxxx-deal-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "Account_Name": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Assistant": {
+      "description": "",
+      "type": null
+    },
+    "Asst_Phone": {
+      "description": "",
+      "type": null
+    },
+    "Created_By": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Created_Time": {
+      "type": "string"
+    },
+    "Date_of_Birth": {
+      "description": "",
+      "type": null
+    },
+    "Department": {
+      "type": "string"
+    },
+    "Description": {
+      "description": "",
+      "type": null
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Email_Opt_Out": {
+      "type": "boolean"
+    },
+    "Enrich_Status__s": {
+      "description": "",
+      "type": null
+    },
+    "Fax": {
+      "description": "",
+      "type": null
+    },
+    "First_Name": {
+      "type": "string"
+    },
+    "Full_Name": {
+      "type": "string"
+    },
+    "Home_Phone": {
+      "description": "",
+      "type": null
+    },
+    "Last_Activity_Time": {
+      "type": "string"
+    },
+    "Last_Enriched_Time__s": {
+      "description": "",
+      "type": null
+    },
+    "Last_Name": {
+      "type": "string"
+    },
+    "Lead_Source": {
+      "type": "string"
+    },
+    "Mailing_City": {
+      "type": "string"
+    },
+    "Mailing_Country": {
+      "type": "string"
+    },
+    "Mailing_State": {
+      "type": "string"
+    },
+    "Mailing_Street": {
+      "type": "string"
+    },
+    "Mailing_Zip": {
+      "type": "string"
+    },
+    "Mobile": {
+      "type": "string"
+    },
+    "Modified_By": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Modified_Time": {
+      "type": "string"
+    },
+    "Other_City": {
+      "description": "",
+      "type": null
+    },
+    "Other_Country": {
+      "description": "",
+      "type": null
+    },
+    "Other_Phone": {
+      "description": "",
+      "type": null
+    },
+    "Other_State": {
+      "description": "",
+      "type": null
+    },
+    "Other_Street": {
+      "description": "",
+      "type": null
+    },
+    "Other_Zip": {
+      "description": "",
+      "type": null
+    },
+    "Owner": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Record_Image": {
+      "type": "string"
+    },
+    "Reporting_To": {
+      "description": "",
+      "type": null
+    },
+    "Salutation": {
+      "description": "",
+      "type": null
+    },
+    "Secondary_Email": {
+      "description": "",
+      "type": null
+    },
+    "Skype_ID": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Twitter": {
+      "type": "string"
+    },
+    "Unsubscribed_Mode": {
+      "description": "",
+      "type": null
+    },
+    "Unsubscribed_Time": {
+      "description": "",
+      "type": null
+    },
+    "id": {
+      "type": "string"
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-deal-collect",
+  "type": "object"
+}

@@ -8,8 +8,8 @@
             "operation": "get",
             "payload_property": "data",
             "properties": {
-                "fields": "Account_Name,Assistant,Asst_Phone,Created_By,Created_Time,Date_of_Birth,Department,Description,Email,Email_Opt_Out,Enrich_Status__s,Fax,First_Name,Full_Name,Home_Phone,Last_Activity_Time,Last_Enriched_Time__s,Last_Name,Lead_Source,Mailing_City,Mailing_Country,Mailing_State,Mailing_Street,Mailing_Zip,Mobile,Modified_By,Modified_Time,Other_City,Other_Country,Other_Phone,Other_State,Other_Street,Other_Zip,Owner,Phone,Record_Image,Reporting_To,Salutation,Secondary_Email,Skype_ID,Title,Twitter,Unsubscribed_Mode,Unsubscribed_Time",
-                "module": "Contacts"
+                "fields": "Account_Name,Account_Number,Account_Site,Account_Type,Annual_Revenue,Billing_City,Billing_Code,Billing_Country,Billing_State,Billing_Street,Created_By,Created_Time,Description,Employees,Enrich_Status__s,Fax,Industry,Last_Activity_Time,Last_Enriched_Time__s,Modified_By,Modified_Time,Owner,Ownership,Parent_Account,Phone,Rating,Record_Image,SIC_Code,Shipping_City,Shipping_Code,Shipping_Country,Shipping_State,Shipping_Street,Ticker_Symbol,Website",
+                "module": "Accounts"
             },
             "system": "{{@ system @}}",
             "type": "rest"
@@ -22,7 +22,7 @@
         "sink": {
             "operation": "upsert",
             "properties": {
-                "module": "Contacts"
+                "module": "Accounts"
             },
             "system": "{{@ system @}}",
             "type": "rest"

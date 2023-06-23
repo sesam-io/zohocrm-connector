@@ -1,0 +1,85 @@
+{
+  "$id": "/api/pipes/xxxxxx-contact-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "Assistant": {
+      "description": "",
+      "type": null
+    },
+    "Asst_Phone": {
+      "description": "",
+      "type": null
+    },
+    "Date_of_Birth": {
+      "description": "",
+      "type": null
+    },
+    "Description": {
+      "description": "",
+      "type": null
+    },
+    "Enrich_Status__s": {
+      "description": "",
+      "type": null
+    },
+    "Fax": {
+      "description": "",
+      "type": null
+    },
+    "Home_Phone": {
+      "description": "",
+      "type": null
+    },
+    "Last_Enriched_Time__s": {
+      "description": "",
+      "type": null
+    },
+    "Other_City": {
+      "description": "",
+      "type": null
+    },
+    "Other_Country": {
+      "description": "",
+      "type": null
+    },
+    "Other_Phone": {
+      "description": "",
+      "type": null
+    },
+    "Other_State": {
+      "description": "",
+      "type": null
+    },
+    "Other_Street": {
+      "description": "",
+      "type": null
+    },
+    "Other_Zip": {
+      "description": "",
+      "type": null
+    },
+    "Reporting_To": {
+      "description": "",
+      "type": null
+    },
+    "Salutation": {
+      "description": "",
+      "type": null
+    },
+    "Secondary_Email": {
+      "description": "",
+      "type": null
+    },
+    "Unsubscribed_Mode": {
+      "description": "",
+      "type": null
+    },
+    "Unsubscribed_Time": {
+      "description": "",
+      "type": null
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-contact-collect",
+  "type": "object"
+}

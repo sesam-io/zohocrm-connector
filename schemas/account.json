@@ -1,0 +1,61 @@
+{
+  "$id": "/api/pipes/xxxxxx-account-collect/entity-types/sink",
+  "$schema": "http://json-schema.org/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "Account_Site": {
+      "description": "",
+      "type": null
+    },
+    "Enrich_Status__s": {
+      "description": "",
+      "type": null
+    },
+    "Fax": {
+      "description": "",
+      "type": null
+    },
+    "Last_Enriched_Time__s": {
+      "description": "",
+      "type": null
+    },
+    "Parent_Account": {
+      "description": "",
+      "type": null
+    },
+    "Rating": {
+      "description": "",
+      "type": null
+    },
+    "SIC_Code": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_City": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_Code": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_Country": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_State": {
+      "description": "",
+      "type": null
+    },
+    "Shipping_Street": {
+      "description": "",
+      "type": null
+    },
+    "Ticker_Symbol": {
+      "description": "",
+      "type": null
+    }
+  },
+  "title": "Pipe sink entity type: xxxxxx-account-collect",
+  "type": "object"
+}

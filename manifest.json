@@ -1,4 +1,5 @@
 {
+  "system": "ZohoCRM",
   "additional_parameters": {
     "account_id": {},
     "token_url": {}
@@ -7,6 +8,12 @@
   "datatypes": {
     "contact": {
       "template": "templates/contact.json"
+    },
+    "deal": {
+      "template": "templates/contact.json"
+    },
+    "account": {
+      "template": "templates/account.json"
     }
   },
   "oauth2": {

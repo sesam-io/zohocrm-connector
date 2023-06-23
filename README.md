@@ -17,3 +17,7 @@ Campaigns : Actual_Cost,Budgeted_Cost,Campaign_Name,Created_By,Created_Time,Desc
 Tasks : Closed_Time,Created_By,Created_Time,Description,Due_Date,Modified_By,Modified_Time,Owner,Priority,Recurring_Activity,Remind_At,Send_Notification_Email,Status,Subject,What_Id,Who_Id
 Events : All_day,Check_In_Address,Check_In_By,Check_In_City,Check_In_Comment,Check_In_Country,Check_In_State,Check_In_Status,Check_In_Sub_Locality,Check_In_Time,Created_By,Created_Time,Description,End_DateTime,Event_Title,Latitude,Longitude,Modified_By,Modified_Time,Owner,Participants,Recurring_Activity,Start_DateTime,Venue,What_Id,Who_Id,ZIP_Code
 ```
+
+## Notes
+
+Webhooks, paging and continuation support has not been implemented yet

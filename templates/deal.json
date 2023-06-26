@@ -5,12 +5,14 @@
     "metadata": {},
     "source": {
       "id_expression": "{{ id }}",
+      "is_chronological": true,
       "operation": "list-records",
       "payload_property": "data",
       "properties": {
         "fields": "Account_Name,Amount,Campaign_Source,Closing_Date,Contact_Name,Created_By,Created_Time,Deal_Name,Description,Expected_Revenue,Last_Activity_Time,Lead_Conversion_Time,Lead_Source,Modified_By,Modified_Time,Next_Step,Overall_Sales_Duration,Owner,Probability,Sales_Cycle_Duration,Stage,Type",
         "module": "Deals"
       },
+      "supports_since": true,
       "system": "{{@ system @}}",
       "trace": {
         "log_request_body_maxsize": 100000,

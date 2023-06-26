@@ -21,4 +21,4 @@ Events : All_day,Check_In_Address,Check_In_By,Check_In_City,Check_In_Comment,Che
 ## Notes
 
 * Only modules available in the free tier has been implemented (Contacts, Accounts and Deals)
-* Webhooks and continuation support has not been implemented yet
+* Webhooks support has not been implemented yet

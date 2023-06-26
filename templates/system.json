@@ -52,7 +52,8 @@
     },
     "list-records": {
       "method": "GET",
-      "url": "{{ properties.module }}?fields={{ properties.fields }}"
+      "next_page_link": "{% if body.info is defined and body.info.next_page_token is defined and body.info.next_page_token %}{{ properties.module }}?fields={{ properties.fields }}&per_page=10&page_token={{ body.info.next_page_token }}{% else %}{% endif %}",
+      "url": "{{ properties.module }}?fields={{ properties.fields }}&per_page=10"
     },
     "upsert": {
       "method": "POST",

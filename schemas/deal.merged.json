@@ -4,124 +4,106 @@
   "additionalProperties": true,
   "properties": {
     "Account_Name": {
-      "anyOf": [
-        {
-          "additionalProperties": true,
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "Amount": {
-      "anyOf": [
-        {
-          "type": "integer"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "Campaign_Source": {
-      "description": "",
-      "type": null
-    },
-    "Closing_Date": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "Contact_Name": {
-      "anyOf": [
-        {
-          "additionalProperties": true,
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        {
-          "type": "null"
-        }
-      ]
-    },
-    "Created_By": {
       "additionalProperties": true,
+      "description": "Select the account related to the contact.",
       "properties": {
-        "email": {
-          "type": "string"
-        },
         "id": {
+          "description": "The id of the account related to the contact.",
           "type": "string"
         },
         "name": {
+          "description": "The name of the account related to the contact.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Amount": {
+      "description": "Specify the amount that can be expected after closing the deal.",
+      "type": "integer"
+    },
+    "Campaign_Source": {
+      "description": "Select the campaign related to the deal.",
+      "type": "string"
+    },
+    "Closing_Date": {
+      "description": "Specify or select the expected close date. This field is mandatory.",
+      "type": "string"
+    },
+    "Contact_Name": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "description": "Contact name Id",
+          "type": "string"
+        },
+        "name": {
+          "description": "Contact name",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Created_By": {
+      "additionalProperties": true,
+      "description": "Displays name of the user created the contact first time.",
+      "properties": {
+        "email": {
+          "description": "Email of the user created the contact first time",
+          "type": "string"
+        },
+        "id": {
+          "description": "Id of the user created the contact first time",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the user created the contact first time",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Created_Time": {
+      "description": "Created datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFS    ET",
       "type": "string"
     },
     "Deal_Name": {
+      "description": "Name of the deal",
       "type": "string"
     },
     "Description": {
-      "description": "",
-      "type": null
+      "description": "Specify any other details about deal.",
+      "type": "string"
     },
     "Expected_Revenue": {
-      "description": "",
-      "type": null
+      "description": "Calculated based on the Amount and deal Stage that you specify",
+      "type": "string"
     },
     "Last_Activity_Time": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "type": "string"
-        }
-      ]
+      "description": "Unclear: Possibly last user activity datetime in ISO format   : YYYY-MM-DDTHH:mm:SS+TZ_OFFSET",
+      "type": "string"
     },
     "Lead_Conversion_Time": {
-      "description": "",
-      "type": null
+      "description": "Lead Conversion Time",
+      "type": "string"
     },
     "Lead_Source": {
-      "description": "",
-      "type": null
+      "description": "select the lead source from the drop-down list",
+      "type": "string"
     },
     "Modified_By": {
       "additionalProperties": true,
       "properties": {
         "email": {
+          "description": "Email of the user modified the deal.",
           "type": "string"
         },
         "id": {
+          "description": "Id of the user modified the deal.",
           "type": "string"
         },
         "name": {
+          "description": "Name of the user modified the deal.",
           "type": "string"
         }
       },
@@ -131,61 +113,49 @@
       "type": "string"
     },
     "Next_Step": {
-      "description": "",
-      "type": null
+      "description": "Specify the next step of the sales process.",
+      "type": "string"
     },
     "Overall_Sales_Duration": {
-      "anyOf": [
-        {
-          "type": "integer"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "description": "Overall sales duration",
+      "type": "integer"
     },
     "Owner": {
       "additionalProperties": true,
       "properties": {
         "email": {
+          "description": "Email of the user to whom the deal is assigned.",
           "type": "string"
         },
         "id": {
+          "description": "id of the user to whom the deal is assigned.",
           "type": "string"
         },
         "name": {
+          "description": "name of the user to whom the deal is assigned.",
           "type": "string"
         }
       },
       "type": "object"
     },
     "Probability": {
+      "description": "Specify the probability of closing a dea",
       "type": "integer"
     },
     "Sales_Cycle_Duration": {
-      "anyOf": [
-        {
-          "type": "integer"
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "description": "Sales cycle duration",
+      "type": "integer"
     },
     "Stage": {
+      "description": "Select the sales stage from the drop-down list. This field is mandatory.",
       "type": "string"
     },
     "Type": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "type": "string"
-        }
-      ]
+      "description": "Select the type of deal (New Business or Existing Business) from the drop-down list.",
+      "type": "string"
     },
     "id": {
+      "description": "Id of the deal",
       "type": "string"
     }
   },

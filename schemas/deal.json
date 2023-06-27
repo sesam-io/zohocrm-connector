@@ -3,29 +3,160 @@
   "$schema": "http://json-schema.org/schema#",
   "additionalProperties": true,
   "properties": {
+    "Account_Name": {
+      "description": "Select the account related to the contact.",
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The id of the account related to the contact."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the account related to the contact."
+        }
+      },
+      "type": "object"
+    },
+    "Amount": {
+      "type": "integer",
+      "description": "Specify the amount that can be expected after closing the deal."
+    },
     "Campaign_Source": {
-      "description": "",
-      "type": null
+      "description": "Select the campaign related to the deal.",
+      "type": "string"
+    },
+    "Closing_Date": {
+      "type": "string",
+      "description": "Specify or select the expected close date. This field is mandatory."
+    },
+    "Contact_Name": {
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+        "type": "string",
+        "description": "Contact name Id"
+        },
+        "name": {
+        "type": "string",
+        "description": "Contact name"
+        }
+      },
+      "type": "object"
+    },
+     "Created_By": {
+       "additionalProperties": true,
+       "description": "Displays name of the user created the contact first time.",
+       "properties": {
+         "email": {
+           "description": "Email of the user created the contact first time",
+           "type": "string"
+         },
+         "id": {
+           "description": "Id of the user created the contact first time",
+           "type": "string"
+         },
+         "name": {
+           "description": "Name of the user created the contact first time",
+           "type": "string"
+         }
+       },
+       "type": "object"
+     },
+    "Created_Time": {
+      "type": "string",
+      "description": "Created datetime in ISO format: YYYY-MM-DDTHH:mm:SS+TZ_OFFS    ET"
+    },
+    "Deal_Name": {
+      "type": "string",
+      "description": "Name of the deal"
     },
     "Description": {
-      "description": "",
-      "type": null
+      "description": "Specify any other details about deal.",
+      "type": "string"
     },
     "Expected_Revenue": {
-      "description": "",
-      "type": null
+      "description": "Calculated based on the Amount and deal Stage that you specify",
+      "type": "string"
+    },
+    "Last_Activity_Time": {
+      "type": "string",
+      "description": "Unclear: Possibly last user activity datetime in ISO format   : YYYY-MM-DDTHH:mm:SS+TZ_OFFSET"
     },
     "Lead_Conversion_Time": {
-      "description": "",
-      "type": null
+      "description": "Lead Conversion Time",
+      "type": "string"
     },
     "Lead_Source": {
-      "description": "",
-      "type": null
+      "description": "select the lead source from the drop-down list",
+      "type": "string"
+    },
+    "Modified_By": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Email of the user modified the deal."
+        },
+        "id": {
+          "type": "string",
+          "description": "Id of the user modified the deal."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the user modified the deal."
+        }
+      },
+      "type": "object"
+    },
+    "Modified_Time": {
+      "type": "string"
     },
     "Next_Step": {
-      "description": "",
-      "type": null
+      "description": "Specify the next step of the sales process.",
+      "type": "string"
+    },
+    "Overall_Sales_Duration": {
+      "type": "integer",
+      "description": "Overall sales duration"
+    },
+    "Owner": {
+      "additionalProperties": true,
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Email of the user to whom the deal is assigned."
+        },
+        "id": {
+          "type": "string",
+          "description": "id of the user to whom the deal is assigned."
+        },
+        "name": {
+          "type": "string",
+          "description": "name of the user to whom the deal is assigned."
+        }
+      },
+      "type": "object"
+    },
+    "Probability": {
+      "type": "integer",
+      "description": "Specify the probability of closing a dea"
+    },
+    "Sales_Cycle_Duration": {
+      "type": "integer",
+      "description": "Sales cycle duration"
+    },
+    "Stage": {
+      "type": "string",
+      "description": "Select the sales stage from the drop-down list. This field is mandatory."
+    },
+    "Type": {
+      "type": "string",
+      "description": "Select the type of deal (New Business or Existing Business) from the drop-down list."
+    },
+    "id": {
+      "type": "string",
+      "description": "Id of the deal"
     }
   },
   "title": "Pipe sink entity type: xxxxxx-deal-collect",

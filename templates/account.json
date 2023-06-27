@@ -4,6 +4,7 @@
     "add_namespaces": false,
     "metadata": {},
     "source": {
+      "id_expression": "{{ id }}",
       "is_chronological": true,
       "operation": "list-records",
       "payload_property": "data",
@@ -19,6 +20,28 @@
       },
       "type": "rest"
     },
+    "transform": [
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "$last-modified",
+              [
+                "datetime-parse",
+                "%Y-%m-%dT%H:%M:%S%z",
+                "_S.Modified_Time"
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      }
+    ],
     "type": "pipe"
   },
   {

@@ -1,4 +1,4 @@
-# zoho-connector
+# zohocrm-connector
 Connector to the Zoho CRM
 
 ## Developer notes

@@ -75,11 +75,11 @@
                 "list",
                 "_*",
                 "$*"
-              ],
-              ["if",
-                ["is-empty", "_S.id"],
-                ["remove", "id"]
               ]
+            ],
+            ["if",
+              ["is-empty", "_S.id"],
+              ["remove", "id"]
             ]
           ],
           "default": [

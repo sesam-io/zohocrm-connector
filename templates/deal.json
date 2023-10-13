@@ -3,6 +3,9 @@
     "_id": "{{@ system @}}-{{@ datatype @}}-collect",
     "add_namespaces": false,
     "metadata": {},
+    "exclude_completeness": [
+      "{{@ system @}}-{{@ datatype @}}-share"
+    ],
     "source": {
       "id_expression": "{{ id }}",
       "is_chronological": true,

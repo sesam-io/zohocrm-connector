@@ -1,5 +1,12 @@
 name: Fetch sesam-py and test on PR
-on: pull_request
+on:
+  pull_request:
+  push:
+    branches:
+      - playground
+      - staging
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-22.04

@@ -1,11 +1,7 @@
 [
   {
-    "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+    "_id": "{{@ system @}}-{{@ datatype @}}-all",
     "add_namespaces": false,
-    "metadata": {},
-    "exclude_completeness": [
-      "{{@ system @}}-{{@ datatype @}}-share"
-    ],
     "source": {
       "id_expression": "{{ id }}",
       "is_chronological": true,
@@ -22,6 +18,18 @@
         "log_response_body_maxsize": 100000
       },
       "type": "rest"
+    },
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+    "add_namespaces": false,
+    "exclude_completeness": [
+      "{{@ system @}}-{{@ datatype @}}-share"
+    ],
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-all",
+      "type": "dataset"
     },
     "transform": [
       {
@@ -80,9 +88,16 @@
                 "$*"
               ]
             ],
-            ["if",
-              ["is-empty", "_S.id"],
-              ["remove", "id"]
+            [
+              "if",
+              [
+                "is-empty",
+                "_S.id"
+              ],
+              [
+                "remove",
+                "id"
+              ]
             ]
           ],
           "default": [

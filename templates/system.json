@@ -81,6 +81,28 @@
       "since_property_name": "If-Modified-Since",
       "updated_expression": "{{ entity.Modified_Time }}",
       "url": "{{ properties.module }}?fields={{ properties.fields }}&per_page=10&sort_order=asc&sort_on=Modified_Time"
+    },
+    "product-delete": {
+      "method": "DELETE",
+      "url": "Products/{{ entity['$source']['id'] }}"
+    },
+    "product-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Products"
+    },
+    "product-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Products/{{ entity['$source']['id'] }}"
+    },
+    "product-update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Products"
     }
   },
   "type": "system:rest",

@@ -12,6 +12,9 @@
     },
     "deal": {
       "template": "templates/deal.json"
+    },
+    "product": {
+      "template": "templates/product.json"
     }
   },
   "oauth2": {

@@ -12,43 +12,67 @@
       "method": "DELETE",
       "url": "Accounts/{{ entity['$source']['id'] }}"
     },
+    "account-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Accounts"
+    },
     "account-lookup": {
       "method": "GET",
       "payload_property": "data",
       "url": "Accounts/{{ entity['$source']['id'] }}"
     },
-    "account-upsert": {
-      "method": "POST",
+    "account-update": {
+      "method": "PUT",
+      "payload-type": "json",
       "payload_property": "data",
-      "url": "Accounts/upsert"
+      "url": "Accounts"
     },
     "contact-delete": {
       "method": "DELETE",
       "url": "Contacts/{{ entity['$source']['id'] }}"
+    },
+    "contact-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Contacts"
     },
     "contact-lookup": {
       "method": "GET",
       "payload_property": "data",
       "url": "Contacts/{{ entity['$source']['id'] }}"
     },
-    "contact-upsert": {
-      "method": "POST",
+    "contact-update": {
+      "method": "PUT",
+      "payload-type": "json",
       "payload_property": "data",
-      "url": "Contacts/upsert"
+      "url": "Contacts"
     },
     "deal-delete": {
       "method": "DELETE",
       "url": "Deals/{{ entity['$source']['id'] }}"
+    },
+    "deal-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Deals"
     },
     "deal-lookup": {
       "method": "GET",
       "payload_property": "data",
       "url": "Deals/{{ entity['$source']['id'] }}"
     },
-    "deal-upsert": {
-      "method": "POST",
+    "deal-update": {
+      "method": "PUT",
+      "payload-type": "json",
       "payload_property": "data",
-      "url": "Deals/upsert"
+      "url": "Deals"
     },
     "list-records": {
       "method": "GET",
@@ -57,12 +81,6 @@
       "since_property_name": "If-Modified-Since",
       "updated_expression": "{{ entity.Modified_Time }}",
       "url": "{{ properties.module }}?fields={{ properties.fields }}&per_page=10&sort_order=asc&sort_on=Modified_Time"
-    },
-    "upsert": {
-      "method": "POST",
-      "payload-type": "json",
-      "payload_property": "data",
-      "url": "{{ properties.module }}/upsert"
     }
   },
   "type": "system:rest",

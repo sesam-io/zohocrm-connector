@@ -8,7 +8,7 @@
       "operation": "list-records",
       "payload_property": "data",
       "properties": {
-        "fields": "Account_Name,Amount,Campaign_Source,Closing_Date,Contact_Name,Created_By,Created_Time,Deal_Name,Description,Expected_Revenue,Last_Activity_Time,Lead_Conversion_Time,Lead_Source,Modified_By,Modified_Time,Next_Step,Overall_Sales_Duration,Owner,Probability,Sales_Cycle_Duration,Stage,Type",
+        "fields": "Account_Name,Amount,Campaign_Source,Closing_Date,Contact_Name,Created_By,Created_Time,Deal_Name,Description,Expected_Revenue,Last_Activity_Time,Lead_Conversion_Time,Lead_Source,Modified_By,Modified_Time,Next_Step,Overall_Sales_Duration,Owner,Probability,Sales_Cycle_Duration,Stage,Type,Pipeline",
         "module": "Deals"
       },
       "supports_since": true,
@@ -129,9 +129,9 @@
         "properties": {
           "module": "Deals",
           "operation_delete": "{{@ datatype @}}-delete",
-          "operation_insert": "{{@ datatype @}}-upsert",
+          "operation_insert": "{{@ datatype @}}-insert",
           "operation_lookup": "{{@ datatype @}}-lookup",
-          "operation_update": "{{@ datatype @}}-upsert",
+          "operation_update": "{{@ datatype @}}-update",
           "primary_key": "id",
           "primary_key_insert": "details.id",
           "rest_system": "{{@ system @}}",

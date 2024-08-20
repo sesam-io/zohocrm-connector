@@ -13,6 +13,9 @@
     "deal": {
       "template": "templates/deal.json"
     },
+    "invoice": {
+      "template": "templates/invoice.json"
+    },
     "product": {
       "template": "templates/product.json"
     },

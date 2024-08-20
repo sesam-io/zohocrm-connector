@@ -74,6 +74,28 @@
       "payload_property": "data",
       "url": "Deals"
     },
+    "invoice-delete": {
+      "method": "DELETE",
+      "url": "Invoices/{{ entity['$source']['id'] }}"
+    },
+    "invoice-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Invoices"
+    },
+    "invoice-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Invoices/{{ entity.id }}"
+    },
+    "invoice-update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Invoices"
+    },
     "list-records": {
       "method": "GET",
       "next_page_link": "{% if body.info is defined and body.info.next_page_token is defined and body.info.next_page_token %}{{ properties.module }}?fields={{ properties.fields }}&sort_order=asc&sort_on=Modified_Time&per_page=10&page_token={{ body.info.next_page_token }}{% else %}{% endif %}",

@@ -103,6 +103,28 @@
       "payload-type": "json",
       "payload_property": "data",
       "url": "Products"
+    },
+    "purchaseorder-delete": {
+      "method": "DELETE",
+      "url": "Purchase_Orders/{{ entity['$source']['id'] }}"
+    },
+    "purchaseorder-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Purchase_Orders"
+    },
+    "purchaseorder-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Purchase_Orders/{{ entity.id }}"
+    },
+    "purchaseorder-update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Purchase_Orders"
     }
   },
   "type": "system:rest",

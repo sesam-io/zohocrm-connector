@@ -15,6 +15,9 @@
     },
     "product": {
       "template": "templates/product.json"
+    },
+    "purchaseorder": {
+      "template": "templates/purchaseorder.json"
     }
   },
   "oauth2": {

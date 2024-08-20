@@ -18,6 +18,12 @@
     },
     "purchaseorder": {
       "template": "templates/purchaseorder.json"
+    },
+    "quote": {
+      "template": "templates/quote.json"
+    },
+    "salesorder": {
+      "template": "templates/salesorder.json"
     }
   },
   "oauth2": {

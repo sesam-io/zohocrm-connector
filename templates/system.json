@@ -125,6 +125,50 @@
       "payload-type": "json",
       "payload_property": "data",
       "url": "Purchase_Orders"
+    },
+    "quote-delete": {
+      "method": "DELETE",
+      "url": "Quotes/{{ entity['$source']['id'] }}"
+    },
+    "quote-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Quotes"
+    },
+    "quote-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Quotes/{{ entity.id }}"
+    },
+    "quote-update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Quotes"
+    },
+    "salesorder-delete": {
+      "method": "DELETE",
+      "url": "Sales_Orders/{{ entity['$source']['id'] }}"
+    },
+    "salesorder-insert": {
+      "id_expression": "{{ id }}",
+      "method": "POST",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Sales_Orders"
+    },
+    "salesorder-lookup": {
+      "method": "GET",
+      "payload_property": "data",
+      "url": "Sales_Orders/{{ entity.id }}"
+    },
+    "salesorder-update": {
+      "method": "PUT",
+      "payload-type": "json",
+      "payload_property": "data",
+      "url": "Sales_Orders"
     }
   },
   "type": "system:rest",

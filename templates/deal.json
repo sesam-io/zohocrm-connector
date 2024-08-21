@@ -4,7 +4,6 @@
     "add_namespaces": false,
     "source": {
       "id_expression": "{{ id }}",
-      "is_chronological": true,
       "operation": "list-records",
       "payload_property": "data",
       "properties": {

@@ -1,0 +1,159 @@
+[
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-all",
+    "add_namespaces": false,
+    "source": {
+      "id_expression": "{{ id }}",
+      "operation": "list-records",
+      "payload_property": "data",
+      "properties": {
+        "fields": "Subject,PO_Date,Owner,Purchase_Items,Billing_Country,Carrier,Status,Shipping_Country,Description,Vendor_Name,Modified_Time",
+        "module": "Purchase_Orders"
+      },
+      "supports_since": true,
+      "system": "{{@ system @}}",
+      "trace": {
+        "log_request_body_maxsize": 100000,
+        "log_response_body_maxsize": 100000
+      },
+      "type": "rest"
+    },
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-collect",
+    "add_namespaces": false,
+    "exclude_completeness": [
+      "{{@ system @}}-{{@ datatype @}}-share"
+    ],
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-all",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "properties": {
+          "operation_lookup": "{{@ datatype @}}-lookup",
+          "primary_key": "id",
+          "rest_system": "{{@ system @}}",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-collect-rest",
+        "type": "template"
+      },
+      {
+        "rules": {
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "$last-modified",
+              [
+                "datetime-parse",
+                "%Y-%m-%dT%H:%M:%S%z",
+                "_S.Modified_Time"
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "properties": {
+          "primary_key": "id",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-collect-rest",
+        "type": "template"
+      }
+    ],
+    "type": "pipe"
+  },
+  {
+    "_id": "{{@ system @}}-{{@ datatype @}}-share",
+    "batch_size": 1,
+    "namespaced_identifiers": false,
+    "sink": {
+      "deletion_tracking": false,
+      "set_initial_offset": "onload"
+    },
+    "source": {
+      "dataset": "{{@ system @}}-{{@ datatype @}}-transform",
+      "type": "dataset"
+    },
+    "transform": [
+      {
+        "rules": {
+          "create-payload": [
+            [
+              "copy",
+              "*",
+              [
+                "list",
+                "_*",
+                "$*"
+              ]
+            ],
+            [
+              "if",
+              [
+                "is-empty",
+                "_S.id"
+              ],
+              [
+                "remove",
+                "id"
+              ]
+            ]
+          ],
+          "default": [
+            [
+              "copy",
+              "*"
+            ],
+            [
+              "add",
+              "$payload",
+              [
+                "dict",
+                "data",
+                [
+                  "list",
+                  [
+                    "apply",
+                    "create-payload",
+                    "_S."
+                  ]
+                ]
+              ]
+            ]
+          ]
+        },
+        "type": "dtl"
+      },
+      {
+        "properties": {
+          "module": "Purchase_Orders",
+          "operation_delete": "{{@ datatype @}}-delete",
+          "operation_insert": "{{@ datatype @}}-insert",
+          "operation_lookup": "{{@ datatype @}}-lookup",
+          "operation_update": "{{@ datatype @}}-update",
+          "primary_key": "id",
+          "primary_key_insert": "details.id",
+          "rest_system": "{{@ system @}}",
+          "share_dataset": "{{@ system @}}-{{@ datatype @}}-share"
+        },
+        "template": "transform-share-rest",
+        "trace": {
+          "log_request_body_maxsize": 100000,
+          "log_response_body_maxsize": 100000
+        },
+        "type": "template"
+      }
+    ],
+    "type": "pipe"
+  }
+]

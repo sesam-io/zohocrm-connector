@@ -6,12 +6,12 @@
       "id_expression": "{{ id }}",
       "operation": "list-records",
       "payload_property": "data",
-      "properties": {
-        "fields": "Account_Name,Amount,Campaign_Source,Closing_Date,Contact_Name,Created_By,Created_Time,Deal_Name,Description,Expected_Revenue,Last_Activity_Time,Lead_Conversion_Time,Lead_Source,Modified_By,Modified_Time,Next_Step,Overall_Sales_Duration,Owner,Probability,Sales_Cycle_Duration,Stage,Type,Pipeline",
-        "module": "Deals"
-      },
       "supports_since": true,
       "system": "{{@ system @}}",
+      "properties": {
+        "fields": "{{@ fields @}}",
+        "module" : "{{@ module @}}"
+      },
       "trace": {
         "log_request_body_maxsize": 100000,
         "log_response_body_maxsize": 100000
@@ -126,7 +126,6 @@
       },
       {
         "properties": {
-          "module": "Deals",
           "operation_delete": "{{@ datatype @}}-delete",
           "operation_insert": "{{@ datatype @}}-insert",
           "operation_lookup": "{{@ datatype @}}-lookup",

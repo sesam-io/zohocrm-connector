@@ -6,12 +6,12 @@
       "id_expression": "{{ id }}",
       "operation": "list-records",
       "payload_property": "data",
-      "properties": {
-        "fields": "Subject,Owner,Ordered_Items,Billing_Country,Carrier,Status,Shipping_Country,Description,Modified_Time",
-        "module": "Sales_Orders"
-      },
       "supports_since": true,
       "system": "{{@ system @}}",
+      "properties": {
+        "fields": "{{@ fields @}}",
+        "module" : "{{@ module @}}"
+      },
       "trace": {
         "log_request_body_maxsize": 100000,
         "log_response_body_maxsize": 100000
@@ -136,7 +136,6 @@
       },
       {
         "properties": {
-          "module": "Sales_Orders",
           "operation_delete": "{{@ datatype @}}-delete",
           "operation_insert": "{{@ datatype @}}-insert",
           "operation_lookup": "{{@ datatype @}}-lookup",

@@ -6,12 +6,12 @@
       "id_expression": "{{ id }}",
       "operation": "list-records",
       "payload_property": "data",
-      "properties": {
-        "fields": "Product_Category,Vendor_Name,Product_Code,Qty_Ordered,Description,Product_Name,Modified_Time",
-        "module": "Products"
-      },
       "supports_since": true,
       "system": "{{@ system @}}",
+      "properties": {
+        "fields": "{{@ fields @}}",
+        "module" : "{{@ module @}}"
+      },
       "trace": {
         "log_request_body_maxsize": 100000,
         "log_response_body_maxsize": 100000
@@ -126,7 +126,6 @@
       },
       {
         "properties": {
-          "module": "Products",
           "operation_delete": "{{@ datatype @}}-delete",
           "operation_insert": "{{@ datatype @}}-insert",
           "operation_lookup": "{{@ datatype @}}-lookup",

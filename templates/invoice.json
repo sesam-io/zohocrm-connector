@@ -4,15 +4,14 @@
     "add_namespaces": false,
     "source": {
       "id_expression": "{{ id }}",
-      "is_chronological": true,
       "operation": "list-records",
       "payload_property": "data",
-      "properties": {
-        "fields": "Owner,Invoiced_Items,Description,Modified_Time,Billing_Country,Status,Purchase_Order,Invoice_Date,Account_Name,Sales_Order,Deal_Name__s,Due_Date,Invoice_Number,Contact_Name,Subject",
-        "module": "Invoices"
-      },
       "supports_since": true,
       "system": "{{@ system @}}",
+      "properties": {
+        "fields": "{{@ fields @}}",
+        "module" : "{{@ module @}}"
+      },
       "trace": {
         "log_request_body_maxsize": 100000,
         "log_response_body_maxsize": 100000
@@ -137,7 +136,6 @@
       },
       {
         "properties": {
-          "module": "Invoices",
           "operation_delete": "{{@ datatype @}}-delete",
           "operation_insert": "{{@ datatype @}}-insert",
           "operation_lookup": "{{@ datatype @}}-lookup",
